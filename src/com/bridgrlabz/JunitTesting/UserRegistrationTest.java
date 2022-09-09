@@ -70,6 +70,17 @@ public void givenPassword_WhenNotProper_ShouldReturnFalse() {
 	boolean result = userRegistration.password("shas@22");
 	Assert.assertEquals(false, result);
 }
+
+@Test
+public void givenPasswordRule2_WhenProper_ShouldReturnTrue() {
+    boolean result = userRegistration.passwordRule2("passWord@123");
+    Assert.assertEquals(true, result);
 }
 
+@Test
+public void givenPasswordRule2_WhenNotProper_ShouldReturnFalse() {
+    boolean result = userRegistration.passwordRule2("sng@");
+    Assert.assertEquals(false, result);
+}
+}
 
