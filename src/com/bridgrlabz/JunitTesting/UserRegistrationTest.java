@@ -82,5 +82,16 @@ public void givenPasswordRule2_WhenNotProper_ShouldReturnFalse() {
     boolean result = userRegistration.passwordRule2("sng@");
     Assert.assertEquals(false, result);
 }
+
+@Test
+public void givenPasswordRule3_WhenProper_ShouldReturnTrue() {
+	boolean result = userRegistration.passwordRule3("shashi@123");
+	Assert.assertEquals(true, result);
 }
 
+@Test
+public void givenPasswordRule3_WhenNotProper_ShouldReturnFalse() {
+	boolean result = userRegistration.passwordRule3("shashin@gn");
+	Assert.assertEquals(false, result);
+}
+}
