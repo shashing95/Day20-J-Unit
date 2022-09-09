@@ -108,4 +108,17 @@ public void givenPasswordRule4_WhenNotProper_ShouldReturnFalse() {
 	Assert.assertEquals(false, result);
 }
 
+
+@Test
+public void givenEmail8_WhenNotProper_ShouldReturnFalse() {
+	boolean result = userRegistration.emailIdValidator("abc@abc@gmail.com");
+	Assert.assertEquals(false, result);
+}
+
+@Test
+public void givenEmail9_WhenNotProper_ShouldReturnFalse() {
+	boolean result = userRegistration.emailIdValidator("abc..2022@gmail.com");
+	Assert.assertEquals(false, result);
+}
+
 }
