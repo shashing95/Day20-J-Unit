@@ -58,6 +58,18 @@ public void givenPhoneNumber_WhenNotProper_ShouldReturnFlase() {
 	boolean result = userRegistration.phoneNumber("919538639621");
 	Assert.assertEquals(false, result);
 }
+
+@Test
+public void givenPassword_WhenProper_ShouldReturnTrue() {
+	boolean result = userRegistration.password("shashi@123");
+	Assert.assertEquals(true, result);
+}
+
+@Test
+public void givenPassword_WhenNotProper_ShouldReturnFalse() {
+	boolean result = userRegistration.password("shas@22");
+	Assert.assertEquals(false, result);
+}
 }
 
 
