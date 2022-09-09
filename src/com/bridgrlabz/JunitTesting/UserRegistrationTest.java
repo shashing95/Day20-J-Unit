@@ -46,4 +46,18 @@ public void givenEmail_WhenNotProper_ShouldReturnFalse() {
 	boolean result = userRegistration.email("shashidhar&nggn@gmail.com");
 	Assert.assertEquals(false, result);
 }
+
+@Test
+public void givenPhoneNumber_WhenProper_ShouldReturnTrue() {
+	boolean result = userRegistration.phoneNumber("91 9538639621");
+	Assert.assertEquals(true, result);
 }
+
+@Test
+public void givenPhoneNumber_WhenNotProper_ShouldReturnFlase() {
+	boolean result = userRegistration.phoneNumber("919538639621");
+	Assert.assertEquals(false, result);
+}
+}
+
+
